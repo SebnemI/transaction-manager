@@ -1,24 +1,21 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import TransactionForm from "./components/TransactionForm";
+import TransactionHistory from "./components/TransactionsList";
+import { TransactionProvider } from "./TransactionContext/TransactionContext";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <TransactionProvider>
+      <div className="App">
+        <div>
+          <h1>Transaction Manager</h1>
+        </div>
+        <div className="container">
+          <TransactionForm></TransactionForm>
+          <TransactionHistory></TransactionHistory>
+        </div>
+      </div>
+    </TransactionProvider>
   );
 }
 

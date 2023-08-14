@@ -1,5 +1,29 @@
 .App {
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 5em 0;
+}
+
+.container {
+  display: flex;
+  width: 100%;
+}
+
+.container > div {
+  flex: 1;
+  padding: 20px;
+  border: 1px solid #ccc;
+}
+
+.container > div:nth-child(1) {
+  width: 40%;
+}
+
+.container > div:nth-child(2) {
+  width: 60%;
 }
 
 .App-logo {
@@ -35,4 +59,78 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+}
+
+.container > div:first-child {
+  flex: 0 0 30%; /* 30% width */
+  padding: 20px;
+  border: 1px solid #ccc;
+}
+
+.container > div:last-child {
+  flex: 0 0 70%; /* 70% width */
+  padding: 20px;
+  border: 1px solid #ccc;
+}
+
+.transaction-form,
+.transaction-history {
+  border: 1px solid #ccc;
+  padding: 20px;
+  margin: 20px;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+}
+
+.transaction-section {
+  margin: 5px 15px 15px 15px;
+}
+
+.transaction-section label {
+  font-weight: bold;
+}
+
+.transaction-section select,
+.transaction-section input[type="number"],
+.transaction-section input[type="text"] {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+.transaction-section input[type="submit"] {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+}
+
+.transaction-section input[type="submit"]:hover {
+  background-color: #0056b3;
+}
+
+.history-list {
+  list-style: none;
+  padding: 0;
+}
+
+.history-item {
+  padding: 10px;
+  margin: 10px;
+  border: 1px solid #ccc;
+}
+
+.history-item p {
+  margin: 0;
+}
+
+.bold {
+  font-weight: 700;
 }
